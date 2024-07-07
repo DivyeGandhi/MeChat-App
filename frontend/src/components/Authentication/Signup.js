@@ -134,6 +134,8 @@ const Signup = () => {
       <FormControl id="first-name" isRequired>
         <FormLabel>Name</FormLabel>
         <Input
+          _focus={{ bgColor:"rgba(255, 255, 255, 1)", borderColor: 'purple' }}
+          bg="rgba(255, 255, 255, 0.7)" backdropFilter="blur(10px)"
           placeholder="Enter Your Name"
           onChange={(e) => setName(e.target.value)}
         />
@@ -141,6 +143,8 @@ const Signup = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
+          _focus={{ bgColor:"rgba(255, 255, 255, 1)", borderColor: 'purple' }}
+          bg="rgba(255, 255, 255, 0.7)" backdropFilter="blur(10px)"
           type="email"
           placeholder="Enter Your Email Address"
           onChange={(e) => setEmail(e.target.value)}
@@ -150,6 +154,8 @@ const Signup = () => {
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
+            _focus={{ bgColor:"rgba(255, 255, 255, 1)", borderColor: 'purple' }}
+            bg="rgba(255, 255, 255, 0.7)" backdropFilter="blur(10px)"
             type={show ? "text" : "password"}
             placeholder="Enter Password"
             onChange={(e) => setPassword(e.target.value)}
@@ -162,9 +168,11 @@ const Signup = () => {
         </InputGroup>
       </FormControl>
       <FormControl id="password" isRequired>
-        <FormLabel>Confirm Password</FormLabel>
+        <FormLabel >Confirm Password</FormLabel>
         <InputGroup size="md">
           <Input
+            _focus={{ bgColor:"rgba(255, 255, 255, 1)", borderColor: 'purple' }}
+            bg="rgba(255, 255, 255, 0.7)" backdropFilter="blur(10px)"
             type={show ? "text" : "password"}
             placeholder="Confirm password"
             onChange={(e) => setConfirmpassword(e.target.value)}
@@ -179,6 +187,8 @@ const Signup = () => {
       <FormControl id="pic">
         <FormLabel>Upload your Picture</FormLabel>
         <Input
+          _focus={{ bgColor:"rgba(255, 255, 255, 1)", borderColor: 'purple' }}
+          bg="rgba(255, 255, 255, 0.7)" backdropFilter="blur(10px)"
           type="file"
           p={1.5}
           accept="image/*"
@@ -186,9 +196,12 @@ const Signup = () => {
         />
       </FormControl>
       <Button
-        colorScheme="blue"
+        bg="rgb(48, 51, 123,0.9)"
+        // colorScheme="blue"
         width="100%"
-        style={{ marginTop: 15 }}
+        style={{ marginTop: 25 , color: 'white'}}
+        _hover={{ bgColor: 'black', color: 'white' }}
+        _active={{ bgColor: 'rgb(48, 51, 123,0.9)', color: 'black' }}
         onClick={submitHandler}
         isLoading={picLoading}
       >
