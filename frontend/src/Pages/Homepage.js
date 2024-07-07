@@ -28,17 +28,18 @@ function Homepage() {
         d="flex"
         justifyContent="center"
         p={3}
-        bg="white"
+        backdropFilter="blur(10px)"
+        bg="rgba(255, 255, 255, 0.3)"
         w="100%"
         m="40px 0 15px 0"
         borderRadius="lg"
         borderWidth="1px"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
-          Talk-A-Tive
+          Me-Chat
         </Text>
       </Box>
-      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+      <Box bg="rgba(255, 255, 255, 0.3)" backdropFilter="blur(10px)" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
             <Tab>Login</Tab>
