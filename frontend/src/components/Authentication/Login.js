@@ -75,9 +75,11 @@ const Login = () => {
       <FormControl id="email" isRequired>
         <FormLabel>Email Address</FormLabel>
         <Input
+          bg="rgba(255, 255, 255, 0.7)" backdropFilter="blur(10px)"
           value={email}
           type="email"
           placeholder="Enter Your Email Address"
+          _focus={{ bgColor:"rgba(255, 255, 255, 1)", borderColor: 'purple' }}
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
@@ -85,10 +87,12 @@ const Login = () => {
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
+            bg="rgba(255, 255, 255, 0.7)" backdropFilter="blur(10px)"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
             placeholder="Enter password"
+            _focus={{ bgColor:"rgba(255, 255, 255, 1)", borderColor: 'purple' }}
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -98,9 +102,11 @@ const Login = () => {
         </InputGroup>
       </FormControl>
       <Button
-        colorScheme="blue"
+        bg="rgb(48, 51, 123,0.9)"
         width="100%"
-        style={{ marginTop: 15 }}
+        style={{ marginTop: 25 , color: 'white'}}
+        _hover={{ bgColor: 'black', color: 'white' }}
+        _active={{ bgColor: 'rgb(48, 51, 123,0.9)', color: 'black' }}
         onClick={submitHandler}
         isLoading={loading}
       >
@@ -108,7 +114,7 @@ const Login = () => {
       </Button>
       <Button
         variant="solid"
-        colorScheme="red"
+        colorScheme="purple"
         width="100%"
         onClick={() => {
           setEmail("guest@example.com");
